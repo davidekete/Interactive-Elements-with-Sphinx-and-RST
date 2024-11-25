@@ -37,7 +37,7 @@ function toggleDropdownOptions(id) {
 
     // Position the dropdown relative to the button
     dropdownOptionsContainer.style.top = `${
-      (triggerRect.bottom + window.scrollY) - 30 // 10px for extra padding to the top, adjust as needed..
+      triggerRect.bottom + window.scrollY // 10px for extra padding to the top, adjust as needed..
     }px`;
     dropdownOptionsContainer.style.left = `${
       triggerRect.left + window.scrollX
