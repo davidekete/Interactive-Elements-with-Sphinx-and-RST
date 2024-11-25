@@ -1,14 +1,16 @@
-Documentation starter pack
-==========================
+Interactive Elements with Sphinx and reStructuredText
+=====================================================
 
-The documentation starter pack helps you to quickly set up, build, and publish documentation with Sphinx.
+This document serves as a proof of concept to prove that simple interactive elements can be included in websites developed using reStructuredText.
 
-It contains common styling and configuration through the `Canonical Sphinx`_ extension, supports both |RST| and Markdown, and includes automatic documentation checks.
+This PoC will be using a fork of Canonical Sphinx-based documentation starter pack and feature a Docker command that allows users to configure and launch a containerized application with a specific environment and network settings on different platforms.
 
-The :ref:`quickstart` gives you a basic idea of how to start.
-Detailed information is available for :ref:`setting up your documentation <setup>` and for :ref:`updating it <update>`.
+.. raw:: html
+   :file: ./snippet.html
 
-You can also find detailed information about the :ref:`automatic-checks` included in the starter pack, and a :ref:`list of projects <examples>` that use the starter pack.
+This document serves as a proof of concept to prove that simple interactive elements can be included in websites developed using reStructuredText.
+
+This PoC will be using a fork of Canonical Sphinx-based documentation starter pack and feature a Docker command that allows users to configure and launch a containerized application with a specific environment and network settings on different platforms.
 
 .. toctree::
    :hidden:

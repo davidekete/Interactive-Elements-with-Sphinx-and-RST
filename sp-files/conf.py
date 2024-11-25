@@ -23,8 +23,8 @@ import ast
 #
 # TODO: Update with the official name of your project or product
 
-project = "Documentation starter pack"
-author = "Canonical Ltd."
+project = "Interactive Elements with Sphinx and reStructuredText"
+author = "David Ekete"
 
 
 # Sidebar documentation title; best kept reasonably short
@@ -33,7 +33,7 @@ author = "Canonical Ltd."
 #
 # TODO: To disable the title, set to an empty string.
 
-html_title = project + " documentation"
+html_title = project + " Proof of Concept"
 
 
 # Copyright string; shown at the bottom of the page
@@ -142,10 +142,6 @@ html_context = {
     #
     # TODO: To customise the directory, uncomment and update as needed.
     "github_folder": "/sp-docs/",
-
-    # TODO: To enable or disable the Previous / Next buttons at the bottom of pages
-    # Valid options: none, prev, next, both
-    # "sequential_nav": "both",
 }
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
@@ -231,7 +227,6 @@ linkcheck_anchors_ignore_for_url = [r"https://github\.com/.*"]
 extensions = [
     "canonical_sphinx",
     "sphinxcontrib.cairosvgconverter",
-    "sphinx_last_updated_by_git"
 ]
 
 
@@ -245,12 +240,15 @@ exclude_patterns = [
 
 html_css_files = [
     "css/pdf.css",
+    "css/styles.css"
 ]
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
 
-# html_js_files = []
+html_js_files = [
+    "scripts/snippet.js"
+]
 
 
 # Specifies a reST snippet to be appended to each .rst file

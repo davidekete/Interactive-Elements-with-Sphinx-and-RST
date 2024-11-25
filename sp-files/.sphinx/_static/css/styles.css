@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* button {
+  padding: 0;
+  background-color: none;
+} */
+
+p {
+  margin: 0;
+}
+
+.container {
+  inline-size: 100%;
+  /* block-size: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 730px; */
+  width: 100%;
+  margin-block: 1rem;
+}
+
+.dropdown-label {
+  cursor: pointer;
+}
+
+.dropdown-options {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  width: max-content;
+  /* display: flex;
+  flex-direction: column; */
+  display: none;
+  box-sizing: border-box;
+  transition: border 0fs ease;
+  /* margin-bottom: 5px; */
+  border-radius: 4px;
+  padding: 5px;
+  position: fixed;
+}
+
+.dropdown-option {
+  cursor: pointer;
+  /* border: 1px solid transparent; */
+  border-radius: 4px;
+  padding: 6px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.dropdown-option:hover {
+  cursor: pointer;
+  /* border: 1px solid #4E4E4E; */
+  background-color: #4e4e4e;
+  /* border-radius: 4px; */
+}
+
+.dropdown {
+  margin: 0rem;
+  padding: 0rem;
+  border-radius: 5px;
+}
+
+.show-dropdown {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.background {
+  inline-size: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: #ffffff;
+  /* padding-block-end: 1rem; */
+  border-radius: 0.2rem;
+  /* max-width: 730px;
+   */
+
+  max-height: fit-content;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  background-color: #2f2f2f;
+  padding: 0.4rem;
+  justify-content: end;
+  /* border-radius: 0.6rem 0.6rem 0rem 0rem; */
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 1.5rem;
+  overflow-x: scroll;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* background-color: #626262; */
+  color: #b4b4b4;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* .icon {
+  position: absolute;
+  left: 0.3rem;
+  top: 0.7rem;
+} */
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flex-no-gap {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.flex p,
+.flex-no-gap p {
+  min-width: max-content;
+}
+
+.green {
+  color: #28f140;
+  /* display: none; */
+}
+
+.blue {
+  color: #1d92ff;
+}
+
+.purple {
+  color: #7916e2;
+}
+
+.red {
+  color: #e31586;
+}
