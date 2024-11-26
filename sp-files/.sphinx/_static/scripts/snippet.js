@@ -95,6 +95,10 @@ async function copyCode(e) {
 
   let snippet = snippetElement.innerText;
 
+  console.log(snippet);
+
+  console.log(snippet.split(/\r?\n/));
+
   //remove all newlines from text
   snippet = snippet.replace(/(\r\n|\n|\r)/gm, "");
 
