@@ -1,7 +1,7 @@
 <div class="container">
   <div class="background">
-    <link rel="stylesheet" href="./.sphinx/_static/css/styles.css" />
-    <script defer src="./.sphinx/_static/scripts/snippet.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
     <div class="top">
       <button
         class="button"
@@ -32,7 +32,7 @@
     <div class="options">
       <p>docker</p>
       <p>&nbsp;run</p>
-      <div class="flex">
+      <div class="flex-no-gap">
         <p>&nbsp;--platform</p>
         <div class="dropdown green">
           <p
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="flex">
+      <div class="flex-no-gap">
         <p>&nbsp;--image</p>
         <div class="dropdown purple">
           <p
@@ -86,7 +86,7 @@
         </div>
       </div>
 
-      <div class="flex">
+      <div class="flex-no-gap">
         <p>&nbsp;--network</p>
         <div class="dropdown red">
           <p
@@ -106,9 +106,4 @@
     </div>
   </div>
 </div>
-<!-- 
-    Dropdown Options:
-    - Each dropdown options container should use a `data-dropdown` attribute with a unique identifier
-      (e.g., `data-dropdown="one"`).
-    - Each option within the container should have the `dropdown-option` class for styling and event handling.
- -->
+

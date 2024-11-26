@@ -92,7 +92,12 @@ function updateDropdownLabel(e) {
   const dropdownLabel = document.querySelector(
     `[data-dropdown-label="${dropdownId}"]`
   );
-  dropdownLabel.innerHTML = `${e.target.innerText}`;
+
+  if (dropdownId === "env") {
+    dropdownLabel.innerHTML = `${e.target.innerText}`;
+  } else {
+    dropdownLabel.innerHTML = `\u00A0${e.target.innerText}`;
+  }
 
   // Hide the dropdown options after selection
   toggleDropdownOptions(dropdownId);
@@ -111,12 +116,23 @@ async function copyCode(e) {
 
   let snippet = snippetElement.innerText;
 
-  console.log(snippet);
-
   console.log(snippet.split(/\r?\n/));
 
+  // console.log(
+  //   snippet
+  //     .split(/\r?\n/)
+  //     .map((el) => {
+  //       if (el === "") {
+  //         return " ";
+  //       } else {
+  //         return el;
+  //       }
+  //     })
+  //     .join()
+  // );
+
   //remove all newlines from text
-  snippet = snippet.replace(/(\r\n|\n|\r)/gm, " ");
+  snippet = snippet.replace(/(\r\n|\n|\r)/gm, "");
 
   try {
     await navigator.clipboard.writeText(snippet);

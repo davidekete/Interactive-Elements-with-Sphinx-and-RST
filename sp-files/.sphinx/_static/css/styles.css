@@ -6,7 +6,7 @@ button {
   box-sizing: border-box;
 }
 
-p {
+.container p {
   margin: 0;
 }
 
