@@ -21,3 +21,4 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, inventore iust
    /docs/update
    /docs/automatic_checks
    /docs/examples
+   /docs/tutorial

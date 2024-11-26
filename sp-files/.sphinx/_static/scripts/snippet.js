@@ -57,16 +57,29 @@ document.addEventListener("click", (e) => {
 
 // Add event listener to close all dropdowns when the snippet container is scrolled
 document.querySelector(".options").addEventListener("scroll", () => {
+  closeAllDropDowns();
+});
+
+// Add event listener to close all dropdowns when background is clicked
+document.querySelector(".top")?.addEventListener("click", (e) => {
+  closeAllDropDowns();
+});
+
+/**
+ * Function to close all drop downs in response to an event
+ */
+function closeAllDropDowns(e) {
   activeDropdownIds.forEach((id) => {
     const dropdownOptionsContainer = document.querySelector(
       `[data-dropdown="${id}"]`
     );
+
     if (dropdownOptionsContainer) {
       dropdownOptionsContainer.classList.remove("show-dropdown");
     }
   });
   activeDropdownIds = []; // Clear active dropdown IDs
-});
+}
 
 /**
  * Updates the main dropdown label based on the selected option.
@@ -79,7 +92,7 @@ function updateDropdownLabel(e) {
   const dropdownLabel = document.querySelector(
     `[data-dropdown-label="${dropdownId}"]`
   );
-  dropdownLabel.innerHTML = e.target.innerText;
+  dropdownLabel.innerHTML = `${e.target.innerText}`;
 
   // Hide the dropdown options after selection
   toggleDropdownOptions(dropdownId);
@@ -90,6 +103,9 @@ function updateDropdownLabel(e) {
  * @param {Event} e - The click event from a dropdown option.
  */
 async function copyCode(e) {
+  //check if any dropdowns are active
+  if (activeDropdownIds.length !== 0) return;
+
   //get current code block
   const snippetElement = document.getElementsByClassName("options")[0];
 
@@ -100,7 +116,7 @@ async function copyCode(e) {
   console.log(snippet.split(/\r?\n/));
 
   //remove all newlines from text
-  snippet = snippet.replace(/(\r\n|\n|\r)/gm, "");
+  snippet = snippet.replace(/(\r\n|\n|\r)/gm, " ");
 
   try {
     await navigator.clipboard.writeText(snippet);
