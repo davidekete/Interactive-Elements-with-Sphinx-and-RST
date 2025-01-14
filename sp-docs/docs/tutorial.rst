@@ -101,5 +101,6 @@ command below:
    make run
 
 The results:
+
 .. figure:: ../../sp-files/.sphinx/_static/interactive-example.gif
    :alt: interactive-el.jpg
