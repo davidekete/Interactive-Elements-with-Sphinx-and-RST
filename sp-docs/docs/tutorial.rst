@@ -10,9 +10,6 @@ starter pack and features a Docker command that allows users to
 configure and launch a containerized application with a specific
 environment and network settings on different platforms.
 
-.. code:: docker
-
-   docker run --platform linux/amd64 --env NODE_ENV=development --image node --network bridge
 
 Interactive Element
 -------------------
@@ -20,6 +17,10 @@ Interactive Element
 The interactive element for this PoC will be a dynamic code block that
 allows you to change the varying parts of the docker command, such as
 the platform, through a dropdown interface.
+
+Here's the Docker command:
+.. code:: docker
+   docker run --platform linux/amd64 --env NODE_ENV=development --image node --network bridge
 
 The element is shown in the image below:
 
@@ -97,5 +98,6 @@ command below:
 
    make run
 
+The results:
 .. figure:: ../../sp-files/.sphinx/_static/interactive-example.gif
    :alt: interactive-el.jpg
