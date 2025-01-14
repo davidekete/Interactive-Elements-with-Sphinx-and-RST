@@ -19,7 +19,9 @@ allows you to change the varying parts of the docker command, such as
 the platform, through a dropdown interface.
 
 Here's the Docker command:
+
 .. code:: docker
+
    docker run --platform linux/amd64 --env NODE_ENV=development --image node --network bridge
 
 The element is shown in the image below:
